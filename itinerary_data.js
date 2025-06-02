@@ -1,67 +1,62 @@
 export const general_travel_tips = {
-    title: "Essential Gold Coast Travel Details",
-    icon: "info",
-    tips: [
-        {
-            heading: "Flight Itinerary",
-            icon: "plane",
-            content: `**Departure (Confirmed)**  
-MEL Melbourne, Australia → OOL Gold Coast, Australia  
-Mon, Jun 9 · 2h 5min · Non-stop  
-Virgin Australia, VA 739  
-Departure: 11:10 AM, Terminal 3  
-Arrival: 1:15 PM, Terminal 1  
-Aircraft: Boeing 737-800  
+  title: "Essential Gold Coast Travel Details",
+  icon: "info",
+  tips: [
+    {
+      heading: "Flight Itinerary",
+      icon: "plane",
+      content: `
+        <strong>Departure</strong><br/>
+        Melbourne (MEL) → Gold Coast (OOL)<br/>
+        <em>Mon, Jun 9 · 2h 5min · Non-stop</em><br/>
+        Virgin Australia VA739<br/>
+        Departure: 11:10 AM (Terminal 3) · Arrival: 1:15 PM (Terminal 1)<br/>
+        Aircraft: Boeing 737-800<br/><br/>
 
-**Return**  
-OOL Gold Coast, Australia → MEL Melbourne, Australia  
-Fri, Jun 13 · 2h 25min · Non-stop  
-Virgin Australia, VA 744  
-Departure: 3:55 PM, Terminal 1  
-Arrival: 6:20 PM, Terminal 3  
-Aircraft: Boeing 737-800  
+        <strong>Return</strong><br/>
+        Gold Coast (OOL) → Melbourne (MEL)<br/>
+        <em>Fri, Jun 13 · 2h 25min · Non-stop</em><br/>
+        Virgin Australia VA744<br/>
+        Departure: 3:55 PM (Terminal 1) · Arrival: 6:20 PM (Terminal 3)<br/>
+        Aircraft: Boeing 737-800<br/><br/>
 
-**Ticket Links:**  
-Dana: [Link](https://drive.proton.me/urls/M5CMK2CRDR#sKpy0UzvOe1p)  
-Adam: [Link](https://drive.proton.me/urls/B0BKMHXM4R#jKoJMbUbF7Hh)  
-Yousef: [Link](https://drive.proton.me/urls/H8TTX5FKG4#mY1AhOcC6XAx)  
-Thomas: [Link](https://drive.proton.me/urls/K0SFVA6BVW#WmdRjsxXaQu9)`
-        },
-        {
-            heading: "Car Rental Details",
-            icon: "car-front",
-            content: `**Reservation Number:** ENJ-57752111  
-**Local Partner Ref #:** WXX002DF76  
-**Driver Name:** Ahmad Deeb  
-**Start:** 09 June 2025, 12:00 PM  
-**End:** 13 June 2025, 12:00 PM  
-**Duration:** 4 days  
-**Cost:** 140.32 AUD (Payable locally, excluding extras)  
-**Phone:** 0416509455  
+        <strong>Tickets:</strong><br/>
+        Dana, Adam, Yousef, and Thomas have individual ticket links available. Please refer to internal documentation or contact the trip coordinator for access.
+      `
+    },
+    {
+      heading: "Car Rental Details",
+      icon: "car-front",
+      content: `
+        <strong>Reservation Info</strong><br/>
+        Reservation #: ENJ-57752111<br/>
+        Local Ref #: WXX002DF76<br/>
+        Driver: Ahmad Deeb<br/>
+        Dates: Jun 9 (12:00) – Jun 13 (12:00)<br/>
+        Duration: 4 days · Cost: 140.32 AUD (payable at counter)<br/><br/>
 
-**Pickup & Drop-off:**  
-Gold Coast Airport (Mon–Sun: 07:00–19:00)  
-Vehicle: Subaru XV or similar  
-Type: Intermediate Elite  
-Transmission: Automatic  
-Seats: 5 | Doors: 4–5 | A/C: Yes  
+        <strong>Pickup & Drop-off</strong><br/>
+        Gold Coast Airport · Open Daily 07:00–19:00<br/>
+        Vehicle: Subaru XV or similar<br/>
+        Group: Intermediate Elite · Auto · 5 seats · A/C<br/><br/>
 
-**Shuttle Info:**  
-Location: 12 Rivendell Drive, Tweed Heads South, Gold Coast  
-Call **131 381** to arrange pickup  
-Follow signage to the “coaches” area at the building’s north end  
-More info: [Everything Fleet](https://everythingfleet.com.au/car-truck-rentals-aus/)  
+        <strong>Shuttle Instructions</strong><br/>
+        Location: 12 Rivendell Drive, Tweed Heads South<br/>
+        Call <a href="tel:131381">131 381</a> to arrange pickup<br/>
+        Follow signage to the northern “Coaches” end of the terminal<br/><br/>
 
-**Included Fees:**  
-- Tax: $12.76  
-- Premium Location Surcharge: $16.64  
+        <strong>Fees Included</strong><br/>
+        Tax: $12.76 · Premium Location Fee: $16.64<br/><br/>
 
-**Rental Document:** [View here](https://drive.proton.me/urls/ZMFMXVNJKM#47NvtSzK7vSl)  
-**Insurance Cover:** [RentalCover Account](https://www.rentalcover.com/en/account?language=en&utm_medium=email&utm_source=transactional&utm_content=enjoytravel&utm_campaign=singletrip-receipt&booking=4XB8-BMGM-INS&cor=AU&vehicle=car)  
-[Policy Wording](https://www.rentalcover.com/en/pds/4XB8-BMGM-INS)`
-        }
-    ]
+        <strong>Documents & Insurance</strong><br/>
+        Rental Confirmation: <a href="[rentalDoc]" target="_blank" rel="noopener">Available here</a><br/>
+        Insurance Coverage: <a href="[insuranceLink]" target="_blank" rel="noopener">View policy</a>
+      `.replace("[rentalDoc]", "https://drive.proton.me/urls/ZMFMXVNJKM#47NvtSzK7vSl")
+       .replace("[insuranceLink]", "https://www.rentalcover.com/en/pds/4XB8-BMGM-INS")
+    }
+  ]
 };
+
 
 
 export const itinerary = [
