@@ -1,0 +1,183 @@
+/* Jony Ive inspired design enhancements */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --gc-primary-blue: #0077B6; /* A sophisticated blue */
+    --gc-secondary-blue: #48CAE4; /* Lighter, vibrant blue */
+    --gc-gold: #FFB703; /* Warm, inviting gold */
+    --gc-sand: #FB8500; /* Sandy orange accent */
+    --gc-green: #2E8B57; /* Hinterland green (subtle use) */
+    --gc-text-dark: #212529;
+    --gc-text-light: #495057;
+    --gc-bg-light: #F8F9FA;
+    --gc-border-light: #DEE2E6;
+}
+
+/* Card styles */
+.activity-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--gc-border-light);
+    border-radius: 12px; /* Softer corners */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Subtle, deeper shadow */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    overflow: hidden; /* Ensures child elements adhere to border radius */
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.activity-card h4 {
+    color: var(--gc-primary-blue);
+    border-bottom: 2px solid var(--gc-gold);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.activity-card .detail-item i {
+    color: var(--gc-sand); /* Icon color */
+    flex-shrink: 0; /* Prevent icons from shrinking */
+}
+
+.activity-card .detail-note {
+    font-size: 0.875rem;
+    color: var(--gc-text-light);
+    margin-top: 0.5rem;
+    padding-left: 1.75rem; /* Align with icon text */
+}
+
+/* Button-like links */
+.btn-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-image: linear-gradient(to right, var(--gc-secondary-blue), var(--gc-primary-blue));
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-link:hover {
+    background-image: linear-gradient(to right, var(--gc-primary-blue), var(--gc-secondary-blue));
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transform: translateY(-1px);
+}
+
+/* Typography enhancements */
+.prose h3 {
+    color: var(--gc-primary-blue);
+}
+
+/* Day Header */
+.day-header {
+    background: linear-gradient(135deg, var(--gc-primary-blue) 0%, var(--gc-secondary-blue) 100%);
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 12px 12px 0 0; /* Rounded top corners */
+    margin-bottom: -1px; /* Overlap slightly with first card if it has border */
+}
+.day-title {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+.day-container {
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden; /* Keep shadows and content within rounded borders */
+}
+
+/* Travel Tips Section */
+.travel-tips-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--gc-border-light);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+}
+
+.travel-tips-card h2 {
+    color: var(--gc-primary-blue);
+    border-bottom: 2px solid var(--gc-gold);
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.travel-tips-card .tip-item {
+    margin-bottom: 1rem;
+}
+
+.travel-tips-card .tip-item h3 {
+    color: var(--gc-text-dark);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.travel-tips-card .tip-item p {
+    color: var(--gc-text-light);
+    line-height: 1.6;
+}
+
+
+/* Specific icon colors if needed, defaults to text color or specific Tailwind class */
+.lucide-map-pin { color: var(--gc-sand); }
+.lucide-clock { color: var(--gc-sand); }
+.lucide-dollar-sign { color: var(--gc-sand); }
+.lucide-globe { color: var(--gc-sand); }
+.lucide-calendar-days { color: var(--gc-sand); }
+.lucide-info { color: var(--gc-primary-blue); } /* For travel tips icon */
+.lucide-utensils { color: var(--gc-primary-blue); }
+.lucide-sparkles { color: var(--gc-gold); }
+
+
+.gradient-text {
+  background: -webkit-linear-gradient(var(--gc-primary-blue), var(--gc-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Styling for alternative activities section */
+.alternatives-section h5 {
+    color: var(--gc-primary-blue);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.alternatives-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.alternatives-section li {
+    padding: 0.25rem 0;
+    color: var(--gc-text-light);
+}
+.alternatives-section li strong {
+    color: var(--gc-text-dark);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem; /* Smaller for mobile */
+    }
+    header p {
+        font-size: 1rem;
+    }
+    .activity-card h4 {
+        font-size: 1.25rem;
+    }
+    .travel-tips-card h2 {
+        font-size: 1.5rem;
+    }
+    .travel-tips-card .tip-item h3 {
+        font-size: 1.1rem;
+    }
+}
