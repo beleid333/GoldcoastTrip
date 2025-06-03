@@ -46,15 +46,32 @@ function renderItinerary() {
         dayElement.className = 'day-container';
 
         let activitiesHtml = dayData.activities.map(activity => {
-            let detailsHtml = '';
-            if (activity.details) {
-                detailsHtml += activity.details.location ? `<p class="detail-item flex items-start"><i data-lucide="map-pin" class="mr-2 mt-1 h-4 w-4"></i><strong>Location:</strong> ${activity.details.location}</p>` : '';
+          let detailsHtml = '';
+if (activity.details) {
+    // Location (for all activities)
+    detailsHtml += activity.details.location ? `<p class="detail-item flex items-start"><i data-lucide="map-pin" class="mr-2 mt-1 h-4 w-4"></i><strong>Location:</strong> ${activity.details.location}</p>` : '';
+    
+    // Map link (for all activities)
+    if (activity.details.map_link) {
+        detailsHtml += `<p class="detail-item flex items-start"><i data-lucide="map" class="mr-2 mt-1 h-4 w-4"></i><strong>Map:</strong> <a href="${activity.details.map_link}" target="_blank" class="text-blue-600 hover:underline">View on Google Maps</a></p>`;
+    }
+                
+                detailsHtml += activity.details.phone ? `<p class="detail-item flex items-start"><i data-lucide="phone" class="mr-2 mt-1 h-4 w-4"></i><strong>Phone:</strong> ${activity.details.phone}</p>` : '';
+                detailsHtml += activity.details.check_in ? `<p class="detail-item flex items-start"><i data-lucide="log-in" class="mr-2 mt-1 h-4 w-4"></i><strong>Check-in:</strong> ${activity.details.check_in}</p>` : '';
+                detailsHtml += activity.details.check_out ? `<p class="detail-item flex items-start"><i data-lucide="log-out" class="mr-2 mt-1 h-4 w-4"></i><strong>Check-out:</strong> ${activity.details.check_out}</p>` : '';
+                detailsHtml += activity.details.nights ? `<p class="detail-item flex items-start"><i data-lucide="moon" class="mr-2 mt-1 h-4 w-4"></i><strong>Nights:</strong> ${activity.details.nights}</p>` : '';
+                detailsHtml += activity.details.suite_type ? `<p class="detail-item flex items-start"><i data-lucide="key" class="mr-2 mt-1 h-4 w-4"></i><strong>Suite Type:</strong> ${activity.details.suite_type}</p>` : '';
+                detailsHtml += activity.details.suite_details ? `<p class="detail-item flex items-start"><i data-lucide="list" class="mr-2 mt-1 h-4 w-4"></i><strong>Suite Details:</strong> ${activity.details.suite_details}</p>` : '';
+                detailsHtml += activity.details.parking ? `<p class="detail-item flex items-start"><i data-lucide="parking-circle" class="mr-2 mt-1 h-4 w-4"></i><strong>Parking:</strong> ${activity.details.parking}</p>` : '';
+                detailsHtml += activity.details.hours ? `<p class="detail-item flex items-start"><i data-lucide="clock" class="mr-2 mt-1 h-4 w-4"></i><strong>Hours:</strong> ${activity.details.hours}</p>` : '';
+                // Handle standard activity details
                 detailsHtml += activity.details.hours ? `<p class="detail-item flex items-start"><i data-lucide="clock" class="mr-2 mt-1 h-4 w-4"></i><strong>Hours:</strong> ${activity.details.hours}</p>` : '';
                 if (activity.details.hours_note) {
                      detailsHtml += `<p class="detail-note text-xs text-amber-700 ml-6 flex items-start"><i data-lucide="alert-circle" class="mr-1 mt-px h-3 w-3"></i>${activity.details.hours_note}</p>`;
                 }
                 detailsHtml += activity.details.price ? `<p class="detail-item flex items-start"><i data-lucide="dollar-sign" class="mr-2 mt-1 h-4 w-4"></i><strong>Price:</strong> ${activity.details.price}</p>` : '';
                 detailsHtml += activity.details.duration ? `<p class="detail-item flex items-start"><i data-lucide="hourglass" class="mr-2 mt-1 h-4 w-4"></i><strong>Duration:</strong> ${activity.details.duration}</p>` : '';
+                
                 if (activity.details.notes && Array.isArray(activity.details.notes)) {
                     activity.details.notes.forEach(note => {
                         detailsHtml += `<div class="mt-2 p-3 bg-sky-50 rounded-md border border-sky-200 text-sm text-sky-700 flex items-start"><i data-lucide="info" class="mr-2 mt-1 h-4 w-4 flex-shrink-0"></i><div>${note}</div></div>`;
@@ -62,7 +79,6 @@ function renderItinerary() {
                 } else if (activity.details.notes) {
                      detailsHtml += `<div class="mt-2 p-3 bg-sky-50 rounded-md border border-sky-200 text-sm text-sky-700 flex items-start"><i data-lucide="info" class="mr-2 mt-1 h-4 w-4 flex-shrink-0"></i><div>${activity.details.notes}</div></div>`;
                 }
-
             }
             
             return `
@@ -79,6 +95,8 @@ function renderItinerary() {
                 ${activity.details && activity.details.website ? `<div class="mt-4"><a href="${activity.details.website}" target="_blank" class="btn-link">Official Website <i data-lucide="external-link" class="inline-block ml-1 h-4 w-4"></i></a></div>` : ''}
             </div>
         `}).join('');
+
+        // ... rest of your existing function remains the same ...
 
         let diningSuggestionsHtml = '';
         if (dayData.dining_suggestions) {

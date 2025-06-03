@@ -65,85 +65,87 @@ export const general_travel_tips = {
 
 
 export const itinerary = [
-  {
-    day: 1,
-    date: "June 9th, Monday",
-    title: "Arrival & Urban Adventure",
-    activities: [
-      {
-        name: "Arrive, Collect Car & Check-in",
-        time_slot: "Afternoon (Arrival: 1:15 PM at the airport)",
-        icon: "plane-landing",
-        description:
-          "Arrive at Gold Coast Airport (OOL). Proceed to collect your pre-booked rental car (allow approx. 1–1.5 hours for collection). Drive to your accommodation at Meriton Suites Surfers Paradise, check-in, and settle in.",
-        details: {
-          location: "Meriton Suites Surfers Paradise",
-          address: "86 Esplanade, Surfers Paradise QLD 4217",
-          phone: "(07) 5620 0888",
-          arrival: "Monday, June 9, 2025 (Suite available from 3:00 PM)",
-          departure: "Friday, June 13, 2025 (Check-out before 10:00 AM)",
-          nights: "4",
-          suite: "1 x 3 Bedroom Ocean Suite (Levels 26–31, Enclosed Balcony, Full Ocean Views)",
-          amenities:
-            "Three separate bedrooms, two bathrooms, full kitchen & laundry, enclosed balcony with table/chairs.",
-          parking: `
-            <strong>Offsite Car Parking:</strong> $20/night · 4-min walk · Plate recognition access on View Ave.<br/>
-            <strong>Onsite Car Parking:</strong> $25/night · 2.1m clearance · Pass provided on check-in.`,
-          map: `<a href="https://www.google.com/maps/dir//86+Esplanade,+Surfers+Paradise+QLD+4217/@-27.9961353,153.3479507,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x6b9105faef614eb1:0x803be4f82483d5b0!2m2!1d153.4303234!2d-27.9961555?entry=ttu" target="_blank" rel="noopener">View on Google Maps</a>`
-        }
-      },
-      {
-        name: "SkyPoint Observation Deck",
-        time_slot: "Late Afternoon (e.g., 2:30 PM - 4:30 PM)",
-        icon: "tower-control",
-        description:
-          "Ascend the Q1 Building for 360-degree views of the Gold Coast from Australia's only beachside observation deck as the sun begins to set.",
-        details: {
-          location: "Level 77, Q1 Building, 9 Hamilton Ave, Surfers Paradise, QLD 4217",
-          hours: "Typical Hours: 7:30 AM – 9:00 PM daily (last entry 8:30 PM)",
-          hours_note: "Confirm hours for June 2025 as they can vary, and check for private event closures.",
-          website: "https://www.skypoint.com.au/",
-          price: "Adults from $31. Check for family passes or bundles.",
-          duration: "1–2 hours"
-        }
-      },
-      {
-        name: "Shisha Night at Cavill Park",
-        time_slot: "Evening (from 5:00 PM)",
-        icon: "smoking",
-        description:
-          "Relax at Shisha Surfers Paradise located in Cavill Park. A laid-back evening option with shisha and casual seating in a lively area near Surfers Paradise nightlife.",
-        details: {
-          location: "Cavill Park, 42 Cavill Ave, Surfers Paradise QLD 4217",
-          hours: "5:00 PM – 11:30 PM",
-          map: `<a href="https://www.google.com/maps/dir/Meriton+Suites+Surfers+Paradise,+Esplanade,+Surfers+Paradise+QLD/Cavill+Park,+42+Cavill+Ave,+Surfers+Paradise+QLD+4217/@-27.9976358,153.423269,16z/data=!3m2!4b1!5s0x6b910572969ae4e5:0x8888afb4b9aab613!4m13!4m12!1m5!1m1!1s0x6b9105faef614eb1:0x803be4f82483d5b0!2m2!1d153.4303234!2d-27.9961555!1m5!1m1!1s0x6b9105732d8c27e3:0x76a3b73771cdd8bf!2m2!1d153.4275746!2d-28.0018891?entry=ttu" target="_blank" rel="noopener">Directions on Google Maps</a>`
-        }
-      },
-      {
-        name: "OPTIONAL Explore Cavill Avenue & Dinner",
-        time_slot: "Evening",
-        icon: "shopping-bag",
-        description:
-          "Stroll down vibrant Cavill Avenue, the heart of Surfers Paradise, with its shops, eateries, and street performers. Choose a restaurant for dinner.",
-        details: {
-          location: "Cavill Avenue, Surfers Paradise, QLD 4217",
-          hours: "Shops generally 9 AM - 8 PM; dining/entertainment later.",
-          price: "Free to explore; costs vary for shopping/dining."
-        }
-      }
-    ],
-    dining_suggestions: {
-      breakfast: "Cafe near your accommodation post check-in.",
-      lunch: "Casual bite in Surfers Paradise.",
-      dinner: "Diverse options on Cavill Avenue or nearby streets (e.g., Italian, Asian, Modern Australian)."
+    {
+        day: 1,
+        date: "June 9th, Monday",
+        title: "Arrival & Urban Adventure",
+        activities: [
+            {
+                name: "Arrive, Collect Car & Check-in",
+                time_slot: "Afternoon (Arrival: 1:15 PM at the airport)",
+                icon: "plane-landing",
+                description: "Arrive at Gold Coast Airport (OOL). Proceed to collect your pre-booked rental car (allow approx. 1-1.5 hours for collection). Drive to your accommodation in Surfers Paradise, check-in, and settle in.",
+                details: {
+                    location: "Meriton Suites Surfers Paradise",
+                    address: "86 Esplanade, Surfers Paradise QLD 4217",
+                    phone: "(07) 5620 0888",
+                    check_in: "Monday, June 9, 2025 (Suite will be available from 3:00 pm)",
+                    check_out: "Friday, June 13, 2025 (Suite should be vacated prior to 10:00 am)",
+                    nights: 4,
+                    suite_type: "1 x 3 Bedroom Ocean Suite (Levels 26-31 ~ Ocean front ~ Enclosed Balcony)",
+                    suite_details: "Three separate bedrooms, two full bathrooms, full kitchen and laundry. Enclosed balcony with table and chairs. (Full Ocean views)",
+                    parking: "Offsite open-air car parking available adjacent to the hotel at $20 per vehicle per night (4-minute walk). Onsite car parking available at $25.00 per vehicle per night (clearance: 2.1 metres).",
+                    map_link: "https://www.google.com/maps/dir//86+Esplanade,+Surfers+Paradise+QLD+4217/@-27.9961353,153.3479507,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x6b9105faef614eb1:0x803be4f82483d5b0!2m2!1d153.4303234!2d-27.9961555?entry=ttu&g_ep=EgoyMDI1MDUyOC4wIKXMDSoASAFQAw%3D%3D"
+                }
+            },
+            {
+                name: "SkyPoint Observation Deck",
+                time_slot: "Late Afternoon (e.g., 2:30 PM - 4:30 PM)",
+                icon: "tower-control",
+                description: "Ascend the Q1 Building for 360-degree views of the Gold Coast from Australia's only beachside observation deck as the sun begins to set.",
+                details: {
+                    location: "Level 77, Q1 Building, 9 Hamilton Ave, Surfers Paradise, QLD 4217",
+                    hours: "Typical Hours: 7:30 AM – 9:00 PM daily (last entry 8:30 PM).",
+                    hours_note: "Confirm hours for June 2025 as they can vary, and check for private event closures.",
+                    website: "https://www.skypoint.com.au/",
+                    price: "Adults from $31. Check for family passes or bundles.",
+                    duration: "1-2 hours."
+                }
+            },
+            {
+                name: "Shisha Night at Cavill Park",
+                time_slot: "Evening (e.g., 6:30 PM - 8:30 PM)",
+                icon: "wind",
+                description: "Enjoy a relaxing evening with shisha at Cavill Park in Surfers Paradise.",
+                details: {
+                    location: "Shisha Surfers Paradise, Cavill Park, 42 Cavill Ave, Surfers Paradise QLD 4217",
+                    hours: "5:00 PM – 11:30 PM",
+                    map_link: "https://www.google.com/maps/dir/Meriton+Suites+Surfers+Paradise,+Esplanade,+Surfers+Paradise+QLD/Cavill+Park,+42+Cavill+Ave,+Surfers+Paradise+QLD+4217/@-27.9976358,153.423269,16z/data=!3m2!4b1!5s0x6b910572969ae4e5:0x8888afb4b9aab613!4m13!4m12!1m5!1m1!1s0x6b9105faef614eb1:0x803be4f82483d5b0!2m2!1d153.4303234!2d-27.9961555!1m5!1m1!1s0x6b9105732d8c27e3:0x76a3b73771cdd8bf!2m2!1d153.4275746!2d-28.0018891?entry=ttu&g_ep=EgoyMDI1MDUyOC4wIKXMDSoASAFQAw%3D%3D"
+                }
+            },
+            {
+                name: "OPTIONAL Explore Cavill Avenue & Dinner",
+                time_slot: "Evening",
+                icon: "shopping-bag",
+                description: "Stroll down vibrant Cavill Avenue, the heart of Surfers Paradise, with its shops, eateries, and street performers. Choose a restaurant for dinner.",
+                details: {
+                    location: "Cavill Avenue, Surfers Paradise, QLD 4217",
+                    hours: "Shops generally 9 AM - 8 PM; dining/entertainment later.",
+                    price: "Free to explore; costs vary for shopping/dining."
+                }
+            },
+            {
+                name: "Board Game Night: Fox Experience",
+                time_slot: "Evening (After Dinner)",
+                icon: "gamepad-2", // or "dice" if you prefer
+                description: "Family game night featuring the Fox Experience board game in the comfort of your suite.",
+                details: {
+                    location: "Meriton Suites Surfers Paradise",
+                    game: "Fox Experience",
+                    duration: "As long as you want to play!",
+                    notes: "Perfect relaxed evening activity with beautiful ocean views from your suite"
+                }
+            },
+        ],
+        dining_suggestions: {
+            breakfast: "Cafe near your accommodation post check-in.",
+            lunch: "Casual bite in Surfers Paradise.",
+            dinner: "Diverse options on Cavill Avenue or nearby streets (e.g., Italian, Asian, Modern Australian)."
+        },
+        alternatives: [
+            { name: "Timezone Surfers Paradise", description: "Large indoor arcade for evening fun if preferred over Cavill Ave exploration." }
+        ]
     },
-    alternatives: [
-      {
-        name: "Timezone Surfers Paradise",
-        description: "Large indoor arcade for evening fun if preferred over Cavill Ave exploration."
-      }
-    ]
-  },
  
 
     {
@@ -152,29 +154,33 @@ export const itinerary = [
         title: "Thrills, Puzzles & Strikes",
         activities: [
             {
-                name: "Jet Boat Extreme",
-                time_slot: "Morning (e.g., 10:00 AM - 11:00 AM)",
-                icon: "boat",
-                description: "An adrenaline-pumping 55-minute jet boat ride with spins, slides, and power-break stops on the Gold Coast Broadwater.",
+                name: "Gold Coast: Sightseeing Cruise with Buffet Lunch",
+                time_slot: "Tuesday, June 10, 2025 at 12:00 PM",
+                icon: "ship",
+                description: "Enjoy a scenic cruise along the Gold Coast waterways with a delicious buffet lunch included. The cruise offers stunning views of the Surfers Paradise skyline and waterfront mansions.",
                 details: {
-                    location: "Behind Vibe Hotel, Ferny Ave, Surfers Paradise, QLD",
-                    hours: "Typical Hours: Rides operate daily, typically 8:15 AM - 4:15 PM.",
-                    hours_note: "Confirm specific ride times for June 2025 and book in advance.",
-                    website: "https://www.jetboatextreme.com.au/",
-                    price: "Adults approx. $89. Booking essential.",
-                    duration: "55 mins ride; allow 1.5 hours total."
-                }
+                    location: "Ferry Wharf, Appel Park, Surfers Paradise (Nerang River-end of Cavill Ave)",
+                    address: "10 Ferny Ave, Surfers Paradise QLD 4217, Australia",
+                    meeting_point: "Look for the SEA WORLD CRUISES vessel at the Ferry Wharf",
+                    parking: "Bruce Bishop Car Park, Beach Road, Surfers Paradise",
+                    transport: "Short walk from Cavill Avenue Light Rail Station and major hotels",
+                    hours: "Please arrive 30 minutes before departure (by 11:30 AM)",
+                    seating: "Inside Seating",
+                    website: "https://www.seaworldcruises.com.au/",
+                    price: "Price included in your GYGG46FKX3KN booking",
+                    duration: "Approximately 2 hours"
+                  }
             },
             {
                 name: "Escape Room Challenge",
-                time_slot: "Afternoon (e.g., 2:00 PM - 3:30 PM)",
+                time_slot: "Afternoon (e.g., 4:00 PM - 5:30 PM)",
                 icon: "key-round",
                 description: "Test your wits and teamwork in an immersive escape room. Choose from various themes.",
                 details: {
-                    location: "Options: Padlock'd (Surfers Paradise Blvd or Paradise Centre) or Eclipse Escape (Chevron Renaissance).",
+                    location: "Eclipse Escape (Chevron Renaissance).",
                     hours: "Generally 10:00 AM - 10:00 PM/11:30 PM.",
                     hours_note: "Operating hours vary by venue. Booking essential for your chosen time slot in June 2025.",
-                    website: "Padlock'd: https://padlockd.com.au/, Eclipse: https://www.eclipseescape.com.au/",
+                    website: "https://www.eclipseescape.com.au/",
                     price: "Approx. $39-$49 per person.",
                     duration: "Approx. 1-hour game + briefing."
                 }
@@ -205,61 +211,6 @@ export const itinerary = [
     },
     {
         day: 3,
-        date: "June 11th, Wednesday",
-        title: "Tamborine Mountain High Ropes Adventure",
-        activities: [
-            {
-                name: "Drive to Tamborine Mountain",
-                time_slot: "Morning",
-                icon: "mountain",
-                description: "Enjoy a scenic drive (~1 hour) from Surfers Paradise to Tamborine Mountain.",
-                details: {}
-            },
-            {
-                name: "TreeTop Challenge High Ropes Course",
-                time_slot: "Mid-morning to Early Afternoon (e.g. 10:00 AM start)",
-                icon: "trees",
-                description: "Conquer Australia's largest high ropes adventure park with ziplines and suspension bridges in the rainforest canopy.",
-                details: {
-                    location: "Inside Thunderbird Park, Cnr Tamborine Mountain Rd & Cedar Creek Falls Rd, North Tamborine",
-                    hours: "Sessions typically start from 9:30 AM or 10:00 AM.",
-                    hours_note: "Bookings essential. Confirm exact session availability for June 2025 on their website.",
-                    website: "https://www.treetopchallenge.com.au/tamborine-mtn-adventure",
-                    price: "Approx. $60-$100+ per adult. Check website.",
-                    duration: "3-4 hours for the main course."
-                }
-            },
-            {
-                name: "Explore Gallery Walk (Optional)",
-                time_slot: "Afternoon",
-                icon: "store",
-                description: "If time permits, stroll Tamborine Mountain's Gallery Walk, browsing art, crafts, and cafes.",
-                details: {
-                    location: "Long Road, Tamborine Mountain, QLD 4272",
-                    hours: "Shops typically 10 AM - 4 PM.",
-                    hours_note: "Individual shop hours may vary."
-                }
-            },
-            {
-                name: "Return to Surfers Paradise",
-                time_slot: "Late Afternoon",
-                icon: "undo-2",
-                description: "Drive back to Surfers Paradise.",
-                details: {}
-            }
-        ],
-        dining_suggestions: {
-            breakfast: "Grab something quick before heading to Tamborine Mountain.",
-            lunch: "Cafe at Thunderbird Park or on Gallery Walk.",
-            dinner: "Relaxed dinner in Surfers Paradise."
-        },
-        alternatives: [
-            { name: "Burleigh Heads Coastal Walk & James St", description: "Opt for a coastal day exploring Burleigh Heads, its scenic walk, and trendy James Street." },
-            { name: "Currumbin Alley Watersports", description: "Enjoy kayaking or stand-up paddleboarding in Currumbin Alley." }
-        ]
-    },
-    {
-        day: 4,
         date: "June 12th, Thursday",
         title: "Sunrise & Hinterland Delights",
         activities: [
@@ -327,6 +278,62 @@ export const itinerary = [
         ]
     },
     {
+        day: 4,
+        date: "June 11th, Wednesday",
+        title: "Tamborine Mountain High Ropes Adventure",
+        activities: [
+            {
+                name: "Drive to Tamborine Mountain",
+                time_slot: "Morning",
+                icon: "mountain",
+                description: "Enjoy a scenic drive (~1 hour) from Surfers Paradise to Tamborine Mountain.",
+                details: {}
+            },
+            {
+                name: "TreeTop Challenge High Ropes Course",
+                time_slot: "Mid-morning to Early Afternoon (e.g. 10:00 AM start)",
+                icon: "trees",
+                description: "Conquer Australia's largest high ropes adventure park with ziplines and suspension bridges in the rainforest canopy.",
+                details: {
+                    location: "Inside Thunderbird Park, Cnr Tamborine Mountain Rd & Cedar Creek Falls Rd, North Tamborine",
+                    hours: "Sessions typically start from 9:30 AM or 10:00 AM.",
+                    hours_note: "Bookings essential. Confirm exact session availability for June 2025 on their website.",
+                    website: "https://www.treetopchallenge.com.au/tamborine-mtn-adventure",
+                    price: "Approx. $60-$100+ per adult. Check website.",
+                    duration: "3-4 hours for the main course."
+                }
+            },
+            {
+                name: "Explore Gallery Walk (Optional)",
+                time_slot: "Afternoon",
+                icon: "store",
+                description: "If time permits, stroll Tamborine Mountain's Gallery Walk, browsing art, crafts, and cafes.",
+                details: {
+                    location: "Long Road, Tamborine Mountain, QLD 4272",
+                    hours: "Shops typically 10 AM - 4 PM.",
+                    hours_note: "Individual shop hours may vary."
+                }
+            },
+            {
+                name: "Return to Surfers Paradise",
+                time_slot: "Late Afternoon",
+                icon: "undo-2",
+                description: "Drive back to Surfers Paradise.",
+                details: {}
+            }
+        ],
+        dining_suggestions: {
+            breakfast: "Grab something quick before heading to Tamborine Mountain.",
+            lunch: "Cafe at Thunderbird Park or on Gallery Walk.",
+            dinner: "Relaxed dinner in Surfers Paradise."
+        },
+        alternatives: [
+            { name: "Burleigh Heads Coastal Walk & James St", description: "Opt for a coastal day exploring Burleigh Heads, its scenic walk, and trendy James Street." },
+            { name: "Currumbin Alley Watersports", description: "Enjoy kayaking or stand-up paddleboarding in Currumbin Alley." }
+        ]
+    },
+    
+    {
         day: 5,
         date: "June 13th, Friday",
         title: "Shopping & Departure",
@@ -361,7 +368,6 @@ export const itinerary = [
             dinner: "Quick bite near Cbus Super Stadium or stadium food. Alternatively, an earlier dinner in Surfers/Robina."
         },
         alternatives: [
-            { name: "Relaxed Final Day", description: "If NRL is not preferred, enjoy a relaxed day: revisit a spot, beach time, or explore an area missed." },
             { name: "Q1 Resort & Spa Options", description: "If not climbing, enjoy Q1 facilities (if staying) or a leisurely brunch with views."}
         ]
     }
