@@ -177,11 +177,11 @@ export const itinerary = [
                 icon: "key-round",
                 description: "Test your wits and teamwork in an immersive escape room. Choose from various themes.",
                 details: {
-                    location: "Eclipse Escape (Chevron Renaissance).",
+                    location: "Escape Hunt Gold Coast 4/83 Scarborough Street, Southport QLD 4215.",
                     hours: "Generally 10:00 AM - 10:00 PM/11:30 PM.",
                     hours_note: "Operating hours vary by venue. Booking essential for your chosen time slot in June 2025.",
-                    website: "https://www.eclipseescape.com.au/",
-                    price: "Approx. $39-$49 per person.",
+                    website: "https://escapehunt.com/au/goldcoast/games/a-timely-escape/booking/",
+                    price: "Approx. $160 per 4 persons.",
                     duration: "Approx. 1-hour game + briefing."
                 }
             },
@@ -211,7 +211,7 @@ export const itinerary = [
     },
     {
         day: 3,
-        date: "June 12th, Thursday",
+        date: "June 11th, Thursday",
         title: "Sunrise & Hinterland Delights",
         activities: [
              {
@@ -279,7 +279,7 @@ export const itinerary = [
     },
     {
         day: 4,
-        date: "June 11th, Wednesday",
+        date: "June 12th, Wednesday",
         title: "Tamborine Mountain High Ropes Adventure",
         activities: [
             {
